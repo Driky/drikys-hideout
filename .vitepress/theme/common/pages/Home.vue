@@ -1,28 +1,43 @@
 <script lang="ts" setup>
 import { siBluesky, siGithub } from "simple-icons";
+const { frontmatter } = useData();
 </script>
 
 <template>
     <Page>
-        <section>
-            <PageTitle title="Welcome!" />
+        <!-- Title at top left -->
+        <PageTitle :title="frontmatter.title!" class="mb-12" />
 
-            <div
-                class="border-deskfolio-bg-lighter bg-deskfolio-bg-light mt-12 rounded-xl border p-8 shadow-xl"
-            >
-                <Prose class="prose-lg">
-                    <Content />
-                </Prose>
+        <!-- Two-column layout: text left, image right -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+                <!-- Left column: Text content -->
+                <div>
+                    <Prose class="prose-lg">
+                        <Content />
+                    </Prose>
+                </div>
+
+                <!-- Right column: Profile image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img
+                        v-if="frontmatter.image"
+                        :src="frontmatter.image"
+                        alt="Profile Picture"
+                        class="border-deskfolio-blue w-full max-w-sm border-1 shadow-xl"
+                    />
+                </div>
             </div>
         </section>
 
+        <!-- Find me online section at bottom -->
         <section>
-            <h2 class="text-deskfolio-text text-3xl font-semibold">
+            <h2 class="text-deskfolio-text mb-8 text-3xl font-semibold">
                 Find me online
             </h2>
 
             <div
-                class="mt-8 flex flex-wrap items-center justify-center gap-6 md:justify-start"
+                class="flex flex-wrap items-center justify-center gap-6 md:justify-start"
             >
                 <a
                     href="https://bsky.app/profile/driky.bsky.social"
