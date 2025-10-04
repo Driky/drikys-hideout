@@ -6,12 +6,13 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
+const themeDir = resolve(currentDir, "theme");
 
-const componentsDir = resolve(currentDir, 'theme', 'components')
-const pagesDir = resolve(currentDir, 'theme', 'pages')
+const componentsDir = resolve(themeDir, "**", "components");
+const pagesDir = resolve(themeDir, "**", "pages");
 
-const composablesDir = resolve(currentDir, 'theme', 'composables')
-const utilsDir = resolve(currentDir, 'theme', 'utils')
+const composablesDir = resolve(themeDir, "**", "composables");
+const utilsDir = resolve(themeDir, "**", "utils");
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -21,7 +22,7 @@ export default defineConfig({
   vite: {
     plugins: [
       AutoImport({
-        imports: ['vue', 'vitepress'],
+        imports: ['vue', 'vitepress',{ from: 'tailwind-variants', imports: ['tv'] },],
         dirs: [composablesDir, utilsDir],
         dts: resolve(currentDir, 'auto-imports.d.ts'),
       }),
@@ -37,12 +38,17 @@ export default defineConfig({
         ),
       }),
       tailwindcss(),
-      // {
-      //   name: 'watcher',
-      //   configureServer(server) {
-      //     server.watcher.add([componentsDir, pagesDir])
-      //   },
-      // },
+      {
+        name: 'watcher',
+        configureServer(server) {
+          server.watcher.add(themeDir)
+        },
+      },
     ],
+    resolve: {
+      alias: {
+        "@": themeDir,
+      },
+    },
   }
 })

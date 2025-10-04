@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "fantasy.vp-preview",
-        "vue.volar"
+        "vue.volar",
+        "editorconfig.editorconfig",
+        "bradlc.vscode-tailwindcss"
     ]
 }
