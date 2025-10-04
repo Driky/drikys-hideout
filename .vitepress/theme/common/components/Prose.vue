@@ -1,6 +1,6 @@
 <script lang="ts">
 const pageProse = tv({
-  base: "vp-doc prose prose-zinc text-black [&>div>div>*:first-child]:mt-0 [&>div>div>*:last-child]:mb-0",
+  base: "vp-doc prose prose-invert max-w-none [&>div>div>*:first-child]:mt-0 [&>div>div>*:last-child]:mb-0",
 });
 
 export interface PageProseProps {

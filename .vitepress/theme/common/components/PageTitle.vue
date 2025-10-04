@@ -1,6 +1,6 @@
 <script lang="ts">
 const pageTitle = tv({
-  base: "text-6xl font-semibold",
+  base: "text-5xl font-bold text-deskfolio-text",
 });
 
 export interface PageTitleProps {

@@ -2,11 +2,11 @@
 import type { VariantProps } from "tailwind-variants";
 
 const button = tv({
-  base: "border-4 border-black px-8 py-4 shadow-[4px_4px_0_black] transition duration-150 ease-linear hover:-translate-x-[0.125rem] hover:-translate-y-[0.125rem] hover:shadow-[6px_6px_0_black]",
+  base: "rounded-lg px-6 py-3 font-medium transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98]",
   variants: {
     color: {
-      primary: "bg-[var(--color-yellow)] hover:bg-[#ffdf1b]",
-      secondary: "text-white bg-[var(--color-purple)] hover:bg-[#828cd2]",
+      primary: "bg-deskfolio-blue text-deskfolio-bg shadow-lg shadow-deskfolio-blue/20 hover:bg-deskfolio-blue-light hover:shadow-xl hover:shadow-deskfolio-blue/30",
+      secondary: "bg-deskfolio-bg-lighter text-deskfolio-text border border-deskfolio-bg-lighter hover:border-deskfolio-blue/50 shadow-md hover:shadow-lg hover:bg-deskfolio-bg-light",
     },
   },
   defaultVariants: {

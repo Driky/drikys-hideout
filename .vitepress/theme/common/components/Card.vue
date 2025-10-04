@@ -3,21 +3,21 @@ import type { VariantProps } from "tailwind-variants";
 
 const card = tv({
   slots: {
-    base: "group relative border-4 border-black bg-white shadow-[8px_8px_0_black] transition duration-150 ease-linear hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0_black]",
-    title: "font-medium text-black",
-    description: "text-black",
+    base: "group relative rounded-xl bg-deskfolio-bg-light border border-deskfolio-bg-lighter shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:border-deskfolio-blue/30 hover:shadow-deskfolio-blue/10",
+    title: "font-semibold text-deskfolio-text group-hover:text-deskfolio-blue-light transition-colors duration-200",
+    description: "text-deskfolio-text-muted",
   },
   variants: {
     size: {
       sm: {
-        base: "space-y-4 p-6",
-        title: "text-2xl",
-        description: "text-lg",
+        base: "space-y-3 p-6",
+        title: "text-xl",
+        description: "text-base",
       },
       md: {
-        base: "space-y-6 p-12",
-        title: "text-4xl",
-        description: "text-xl",
+        base: "space-y-4 p-8",
+        title: "text-2xl",
+        description: "text-lg",
       },
     },
   },

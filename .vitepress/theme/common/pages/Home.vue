@@ -4,18 +4,18 @@
       <PageTitle title="Welcome!" />
 
       <div
-        class="mt-16 border-4 border-black bg-[#4FFFAF] p-12 shadow-[8px_8px_0_black]"
+        class="mt-12 rounded-xl border border-deskfolio-bg-lighter bg-deskfolio-bg-light p-8 shadow-xl"
       >
-        <Prose class="prose-xl">
+        <Prose class="prose-lg">
           <Content />
         </Prose>
       </div>
     </section>
 
     <section>
-      <h2 class="text-4xl font-semibold text-black">Find me online</h2>
+      <h2 class="text-3xl font-semibold text-deskfolio-text">Find me online</h2>
 
-      <div class="mt-8 flex flex-wrap justify-center gap-8 md:justify-start">
+      <div class="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
         <Button
           color="secondary"
           label="Bluesky"
