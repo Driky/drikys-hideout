@@ -1,1 +1,7 @@
 node_modules/
+
+# Vitepress
+.vitepress/cache
+.vitepress/dist
+.vitepress/components.d.ts
+.vitepress/auto-imports.d.ts
