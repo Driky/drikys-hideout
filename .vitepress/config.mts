@@ -37,6 +37,10 @@ export default defineConfig({
                     "vue",
                     "vitepress",
                     { from: "tailwind-variants", imports: ["tv"] },
+                    {
+                        from: "lucide-vue-next",
+                        imports: ["House", "BookText"],
+                    },
                 ],
                 dirs: [composablesDir, utilsDir],
                 dts: resolve(currentDir, "auto-imports.d.ts"),

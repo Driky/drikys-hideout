@@ -4,7 +4,7 @@ const pageFooter = tv({
 });
 
 export interface PageFooterProps {
-  backTo: { href: string; label: string };
+  backTo?: { href: string; label: string };
   class?: any;
 }
 export interface PageFooterEmits {}
@@ -20,7 +20,7 @@ const ui = computed(() => pageFooter({ class: props.class }));
 </script>
 
 <template>
-  <div :class="ui">
+  <div v-if="props.backTo" :class="ui">
     <Button :href="props.backTo.href" :label="props.backTo.label" />
   </div>
 </template>
