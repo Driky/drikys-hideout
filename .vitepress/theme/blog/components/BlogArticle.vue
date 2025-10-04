@@ -29,7 +29,6 @@ const ui = computed(() => blogArticle());
     <h1 :class="ui.title({ class: props.ui?.title })">
       {{ props.title }}
     </h1>
-
     <Prose :class="ui.prose({ class: props.ui?.prose })">
       <Content />
     </Prose>

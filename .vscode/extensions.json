@@ -3,6 +3,7 @@
         "fantasy.vp-preview",
         "vue.volar",
         "editorconfig.editorconfig",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
     ]
 }
