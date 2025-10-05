@@ -1,7 +1,7 @@
 <script lang="ts">
 const blogArticle = tv({
   slots: {
-    base: "space-y-12 rounded-xl border border-deskfolio-bg-lighter bg-deskfolio-bg-light p-8 shadow-xl md:p-12",
+    base: "space-y-12",
     title: "text-5xl font-bold text-deskfolio-text",
     prose: "",
   },

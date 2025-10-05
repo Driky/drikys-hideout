@@ -30,6 +30,7 @@ export default defineConfig({
         // { light: "vitesse-black", dark: "vitesse-black" },
         lineNumbers: true,
     },
+    cleanUrls: true,
     vite: {
         plugins: [
             AutoImport({
